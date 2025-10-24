@@ -5,6 +5,7 @@ import Games from './pages/Games'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Error from './pages/Error'
+import JuegoEstrellas from './components/JuegoEstrellas'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/games" element={<Games />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/JuegoEstrellas" element={<JuegoEstrellas />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

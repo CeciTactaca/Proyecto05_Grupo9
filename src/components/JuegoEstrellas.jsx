@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import "../assets/css/JuegoEstrellas.css";
 
 function JuegoEstrellas() {
     const [posicion, setPosicion] = useState({ x: 0, y: 0 });
+    const [visible, setVisible] = useState(true);
 
 
     const generarPosicionRandom = () => {
@@ -9,18 +11,22 @@ function JuegoEstrellas() {
         const y = Math.floor(Math.random() * 80) + 10;
         setPosicion({ x, y });
     };
+    
+    useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(prev => !prev) 
+      generarPosicionRandom();
+    }, 2000);
 
+    return () => clearInterval(interval);
+  }, []);
 
     return (
         <>
         <div className="contenedor-juego">
             <h1>Atrapa las estrellas</h1>
 
-            <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
-                <p>Estrellas atrapadas: {puntos}</p>
-                {mensaje && <h2>{mensaje}</h2>}
-
-                {visible && JuegoActivo && (
+                {visible (
                     <div className="estrella"
                         onClick={obtenerEstrella}
                         style={{
@@ -34,7 +40,7 @@ function JuegoEstrellas() {
                     </div>
                 )}
             </div>
-        </div>
+        
         </>
     )
 }
