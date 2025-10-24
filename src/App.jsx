@@ -1,10 +1,10 @@
 import { Container } from 'react-bootstrap'
 import { Routes, Route } from 'react-router-dom'
-import Layout from './assets/pages/Layout'
-import Games from './assets/pages/Games'
-import Home from './assets/pages/Home'
-import AboutUs from './assets/pages/AboutUs'
-import Error from './assets/pages/Error'
+import Layout from './pages/Layout'
+import Games from './pages/Games'
+import Home from './pages/Home'
+import AboutUs from './pages/AboutUs'
+import Error from './pages/Error'
 
 
 function App() {

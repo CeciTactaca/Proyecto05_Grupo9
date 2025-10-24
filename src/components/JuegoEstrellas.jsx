@@ -12,7 +12,30 @@ function JuegoEstrellas() {
 
 
     return (
-      <div></div>
+        <>
+        <div className="contenedor-juego">
+            <h1>Atrapa las estrellas</h1>
+
+            <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
+                <p>Estrellas atrapadas: {puntos}</p>
+                {mensaje && <h2>{mensaje}</h2>}
+
+                {visible && JuegoActivo && (
+                    <div className="estrella"
+                        onClick={obtenerEstrella}
+                        style={{
+                            position: 'absolute',
+                            left: `${posicion.x}%`,
+                            top: `${posicion.y}%`,
+                            fontSize: '25px',
+                        }}
+                    >
+                        ⭐
+                    </div>
+                )}
+            </div>
+        </div>
+        </>
     )
 }
 

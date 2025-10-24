@@ -1,8 +1,8 @@
-import musica from '../sounds/pou.mp3';
+import musica from '../assets/sounds/pou.mp3';
 import { useNavigate } from 'react-router-dom';
-import FormJuegos from '../components/FormJuegos';
+//import FormJuegos from '../components/FormJuegos';
 import { Button } from 'react-bootstrap';
-import JuegoEstrellas from '../components/JuegoEstrellas';
+//import JuegoEstrellas from '../components/JuegoEstrellas';
 
 function Games() {
 
