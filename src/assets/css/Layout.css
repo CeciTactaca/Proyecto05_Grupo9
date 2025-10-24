@@ -1,0 +1,19 @@
+body {
+    background: repeating-linear-gradient(
+        45deg,
+        #606dbc,
+        #606dbc 10px,
+        #465298 10px,
+        #465298 20px
+    );
+    min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+  background: hsla(240, 67%, 94%, 0.318);
+  color: white;
+  padding: 2rem;
+}
+
+
