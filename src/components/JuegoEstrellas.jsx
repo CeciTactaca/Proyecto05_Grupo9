@@ -4,6 +4,9 @@ import "../assets/css/JuegoEstrellas.css";
 function JuegoEstrellas() {
     const [posicion, setPosicion] = useState({ x: 0, y: 0 });
     const [visible, setVisible] = useState(true);
+    const [puntos, setPuntos] = useState(0);
+    const [mensaje, setMensaje] = useState("");
+    const [JuegoActivo, setJuegoActivo] = useState(true); 
 
 
     const generarPosicionRandom = () => {
@@ -21,10 +24,17 @@ function JuegoEstrellas() {
     return () => clearInterval(interval);
   }, []);
 
+    const obtenerEstrella = () => {
+    setPuntos(puntos+1)
+    setVisible(false)
+  }
+
     return (
         <>
         <div className="contenedor-juego">
             <h1>Atrapa las estrellas</h1>
+            <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
+               <p>Estrellas atrapadas: {puntos}</p> 
 
                 {visible (
                     <div className="estrella"
@@ -40,7 +50,7 @@ function JuegoEstrellas() {
                     </div>
                 )}
             </div>
-        
+          </div>
         </>
     )
 }
