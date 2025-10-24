@@ -5,7 +5,7 @@ function Home() {
     return(
         <>
         <h1>Home</h1>
-        <img src={logo} widtsh="100%" />
+        <img src={logo} width="100%" />
         </>
     )
 };
